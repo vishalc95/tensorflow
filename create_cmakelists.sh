@@ -1,3 +1,7 @@
+#!/bin/bash
+set -e
+
+# Define the content of the CMakeLists.txt file
 CONTENT="cmake_minimum_required(VERSION 3.5.1)
 project(tensorflow VERSION 2.4.0)
 
@@ -32,3 +36,6 @@ install(TARGETS tensorflow
 )
 
 install(DIRECTORY include/ DESTINATION include)"
+
+# Write the content to the CMakeLists.txt file
+echo -e "$CONTENT" > CMakeLists.txt
